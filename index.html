@@ -381,7 +381,7 @@ function select_language(uri, text, lang) {
     $('#text').val(text);
     $('#webservice').text(uri);
 
-    server = window.location.origin+uri;
+    server = uri;
 
     if (lang == "en")
         res_prefix = "http://dbpedia.org/resource/"
