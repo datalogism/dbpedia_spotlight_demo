@@ -380,9 +380,10 @@ var res_prefix = 'http://dbpedia.org/resource/'
 function select_language(uri, text, lang) {
     $('#text').val(text);
     $('#webservice').text(uri);
-
+    console.log("SL _ before >"+uri);
     server = window.location.origin+uri;
 
+    console.log("SL _ after >"+server);
     if (lang == "en")
         res_prefix = "http://dbpedia.org/resource/"
     else
@@ -646,6 +647,7 @@ $(document).ready(function() {
 				var language = $(this).find('language').text();
 				var url = $(this).find('url').text();
 				var text = $(this).find('text').text();
+                console.log("HERE +"+url);
 				$("body").data(i18n, { content: text, endpoint: url });	
 				selectLanguage.append($('<option></option>').val(i18n).html(language));				   
 			});
