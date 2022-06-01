@@ -644,7 +644,7 @@ $(document).ready(function() {
 			$(xml).find('site').each(function(){
 				var i18n = $(this).find('i18n').text();
 				var language = $(this).find('language').text();
-				var url = $(this).find('url').text();
+				var url = window.location.origin+$(this).find('url').text();
 				var text = $(this).find('text').text();
 				$("body").data(i18n, { content: text, endpoint: url });	
 				selectLanguage.append($('<option></option>').val(i18n).html(language));				   
